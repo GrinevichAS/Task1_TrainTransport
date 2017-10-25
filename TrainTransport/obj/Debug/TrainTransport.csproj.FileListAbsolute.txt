@@ -1,0 +1,6 @@
+c:\users\alexandr\documents\visual studio 2015\Projects\TrainTransport\TrainTransport\bin\Debug\TrainTransport.exe.config
+c:\users\alexandr\documents\visual studio 2015\Projects\TrainTransport\TrainTransport\bin\Debug\TrainTransport.exe
+c:\users\alexandr\documents\visual studio 2015\Projects\TrainTransport\TrainTransport\bin\Debug\TrainTransport.pdb
+c:\users\alexandr\documents\visual studio 2015\Projects\TrainTransport\TrainTransport\obj\Debug\TrainTransport.csprojResolveAssemblyReference.cache
+c:\users\alexandr\documents\visual studio 2015\Projects\TrainTransport\TrainTransport\obj\Debug\TrainTransport.exe
+c:\users\alexandr\documents\visual studio 2015\Projects\TrainTransport\TrainTransport\obj\Debug\TrainTransport.pdb
