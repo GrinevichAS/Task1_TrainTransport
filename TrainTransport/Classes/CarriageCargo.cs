@@ -9,12 +9,12 @@
         public new string Name
         {
             get { return _name; }
-            set { _name = value != "" ? value : "UnNamed"; }
+            set { _name = value != "" ? value : "UnNamedCarr"; }
         }
         public new double Tare
         {
             get { return _tare; }
-            set { _tare = value >= 0 ? value : 100; } //100?
+            set { _tare = value >= 0 ? value : 100; } 
         }
 
         public double Carrying

@@ -6,7 +6,8 @@
         private double _tare;
         private double _baggage;
         private int _maxPassengers;
-        public int PassengersNumber { get; set; }
+        private int _passengersNumber;
+        
         public Comfort Comfort;
 
         public new string Name
@@ -17,7 +18,7 @@
         public new double Tare
         {
             get { return _tare; }
-            set { _tare = value >= 0 ? value : 100; } //100?
+            set { _tare = value >= 0 ? value : 100; } 
         }
 
         public int MaxPassengers
@@ -32,12 +33,20 @@
             set { _baggage = value >= 0 ? value : 0; }
         }
 
-        public CarriagePassenger(string name, double tare, int maxPassengers, double baggage)
+        public int PassengersNumber
+        {
+            get { return _passengersNumber; }
+            set { _passengersNumber = value <= _maxPassengers ? value : _maxPassengers; }
+        }
+
+        public CarriagePassenger(string name, double tare, int maxPassengers, double baggage, int passengerNumber, Comfort comfort)
         {
             this.Name = name;
             this.Tare = tare;
             this.MaxPassengers = maxPassengers;
             this.Baggage = baggage;
+            this.PassengersNumber = passengerNumber;
+            this.Comfort = comfort;
         }
 
     }

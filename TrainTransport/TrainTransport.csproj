@@ -48,10 +48,12 @@
     <Compile Include="Classes\Comfort.cs" />
     <Compile Include="Classes\Locomotive.cs" />
     <Compile Include="Classes\CarriagePassenger.cs" />
+    <Compile Include="Classes\TrainCargo.cs" />
     <Compile Include="Classes\TrainPassenger.cs" />
     <Compile Include="Interfaces\ICarriage.cs" />
     <Compile Include="Interfaces\ILocomotive.cs" />
     <Compile Include="Interfaces\ITrain.cs" />
+    <Compile Include="Interfaces\ITrainCargo.cs" />
     <Compile Include="Interfaces\ITrainPassenger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
