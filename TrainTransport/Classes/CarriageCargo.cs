@@ -29,5 +29,10 @@
             this.Tare = tare;
             this.Carrying = carrying;
         }
+
+        public override double GetWeight()
+        {
+            return (this.Tare + this.Carrying);
+        }
     }
 }

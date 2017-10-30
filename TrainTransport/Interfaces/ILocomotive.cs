@@ -7,7 +7,5 @@ namespace TrainTransport.Interfaces
         string Name { get; }
         double Speed { get; }
         double Power { get; }
-        
-
     }
 }

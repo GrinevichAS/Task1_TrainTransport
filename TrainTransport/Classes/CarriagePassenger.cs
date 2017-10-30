@@ -1,4 +1,6 @@
-﻿namespace TrainTransport.Classes
+﻿using System;
+
+namespace TrainTransport.Classes
 {
     public class CarriagePassenger : Carriage
     {
@@ -7,8 +9,7 @@
         private double _baggage;
         private int _maxPassengers;
         private int _passengersNumber;
-        
-        public Comfort Comfort;
+        public Comfort Comfort { get; private set; }
 
         public new string Name
         {
@@ -49,5 +50,9 @@
             this.Comfort = comfort;
         }
 
+        public override double GetWeight()
+        {
+            return (this.Tare + this.Baggage);
+        }
     }
 }

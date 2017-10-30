@@ -7,8 +7,8 @@ namespace TrainTransport.Classes
 {
     public class TrainPassenger: ITrainPassenger
     {
-        public Locomotive Locomotive { get; set; }
-        public ICollection<CarriagePassenger> Carriages { get; set; }
+        public Locomotive Locomotive { get; private set; }
+        public ICollection<CarriagePassenger> Carriages { get; private set; }
 
         public TrainPassenger(Locomotive locomotive, ICollection<CarriagePassenger> carriages)
         {

@@ -11,10 +11,7 @@ namespace TrainTransport.Classes
 
         public string Name
         {
-            get
-            {
-                return _name;
-            }
+            get { return _name; }
             set { _name = value != "" ? value : "UnNamedLocom"; }
         }
 

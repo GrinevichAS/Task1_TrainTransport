@@ -10,7 +10,7 @@ namespace TrainTransport
 {
     class Program
     {
-        public static void TotalCount(TrainPassenger tr)
+        public static void SortComfort(TrainPassenger tr)
         {
             foreach (var carriage in tr.SortByComfort())
             {
@@ -19,15 +19,15 @@ namespace TrainTransport
             Console.WriteLine("------------------------------");
         }
 
-        public static void SortComfort(TrainPassenger tr)
+        public static void TotalCount(TrainPassenger tr)
         {
-            int summPass = 0;
-            double sumBagg = 0.0;
-            foreach (var carriage in tr.Carriages)
-            {
-                summPass += carriage.PassengersNumber;
-                sumBagg += carriage.Baggage;
-            }
+            int summPass = (from carriage in tr.Carriages
+                           select carriage.PassengersNumber)
+                           .Sum();
+            double sumBagg = (from carriage in tr.Carriages
+                              select carriage.Baggage)
+                           .Sum();
+
             Console.WriteLine("Passengers: " + summPass + "  Baggage: " + sumBagg);
             Console.WriteLine("------------------------------");
         }
@@ -52,7 +52,7 @@ namespace TrainTransport
 
         static void Main(string[] args)
         {
-            Locomotive loco = new Locomotive("l-01", 355, 120);
+            Locomotive locom = new Locomotive("L-01", 355, 120);
             ICollection<CarriagePassenger> carriageList = new List<CarriagePassenger>();
             carriageList.Add(new CarriagePassenger("C-11", 100, 50, 10, 32, Comfort.Low));
             carriageList.Add(new CarriagePassenger("C-10", 100, 50, 12, 30, Comfort.High));
@@ -60,12 +60,12 @@ namespace TrainTransport
             carriageList.Add(new CarriagePassenger("C-13", 100, 50, 18, 25, Comfort.Medium));
             carriageList.Add(new CarriagePassenger("C-10", 100, 55, 13, 60, Comfort.Low));
 
-            TrainPassenger train = new TrainPassenger(loco, carriageList);
+            TrainPassenger train = new TrainPassenger(locom, carriageList);
 
             TotalCount(train);
             SortComfort(train);
             CarriageSearch(train, 30, 60);
-
+           
             Console.ReadKey();
         }
     }

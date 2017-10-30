@@ -3,9 +3,12 @@ using TrainTransport.Interfaces;
 
 namespace TrainTransport.Classes
 {
-    public abstract class Carriage : ICarriage
+    abstract class Carriage : ICarriage
     {
-        public string Name { get; }
-        public double Tare { get; }
+        public string Name { get; set; }
+        public double Tare { get; set; }
+
+        public abstract double GetWeight();
+
     }
 }
